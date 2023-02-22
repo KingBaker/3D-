@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    /* height: 100%; */
+    background: #23303e;
+    display: flex;
+}
+.content {
+    margin: auto;
+    display: flex;
+    color: #fff;
+    font-size: 80px;
+    font-weight: bolder;
+}
+.content .text {
+    animation: animate ease-in-out .5s infinite alternate;
+    animation-delay: calc(var(--i) / 10 * 1s);
+    filter: drop-shadow(1px 1px 20px #91c5b0);
+}
+@keyframes animate {
+    /* 50% {
+        color: #787878;
+        transform: translateY(-20px);
+    } */
+    100% {
+        color: #91c5b0;
+        transform: translateY(50px);
+    }
+}
