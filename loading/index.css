@@ -18,17 +18,13 @@ body {
     font-weight: bolder;
 }
 .content .text {
-    animation: animate ease-in-out .5s infinite alternate;
+    animation: animate ease-in-out .8s infinite alternate;
     animation-delay: calc(var(--i) / 10 * 1s);
-    filter: drop-shadow(1px 1px 20px #91c5b0);
+    filter: drop-shadow(1px 1px 20px #12a397);
 }
 @keyframes animate {
-    /* 50% {
-        color: #787878;
-        transform: translateY(-20px);
-    } */
     100% {
         color: #91c5b0;
-        transform: translateY(50px);
+        transform: translateY(30px);
     }
 }
