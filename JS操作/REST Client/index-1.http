@@ -1,0 +1,16 @@
+@api = https://example.com
+GET {{api}}/comments/1 HTTP/1.1
+
+###
+
+GET {{api}}/topics/1 HTTP/1.1
+
+###
+
+POST {{api}}/comments HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- chatGPT用js写的登录 -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>登录</title>
+  </head>
+  <body>
+    <h1>登录</h1>
+    <form>
+      <label for="username">用户名：</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">密&nbsp;&nbsp;&nbsp;码：</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="button" value="登录" onclick="login()">
+    </form>
+    <div id="result"></div>
+    <script>
+        function login() {
+            // 获取用户名和密码输入框的值
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // 定义登录信息的对象
+            var loginData = {
+                "admin": "password",
+                "user1": "123456"
+            };
+
+            // 验证用户名和密码是否正确
+            if (loginData.hasOwnProperty(username) && loginData[username] === password) {
+                document.getElementById("result").innerHTML = "登录成功";
+            } else {
+                document.getElementById("result").innerHTML = "用户名或密码错误";
+            }
+        }
+    </script>
+  </body>
+</html>

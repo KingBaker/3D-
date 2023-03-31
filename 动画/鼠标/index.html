@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标样式</title>
+    <style>
+        * {
+            cursor: none!important;
+        }
+        body {
+            overflow: hidden;
+            background: rgba(33, 207, 207, 0.933);
+        }
+        
+        img {
+            position: absolute;
+            top: 0px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://media.giphy.com/media/SwHQCKdGMx9Psyomr1/giphy.gif" alt="">
+    <script>
+        var pic = document.querySelector('img');
+        document.addEventListener('mousemove', function(e) {
+            // 1. mousemove 只要我们鼠标移动1px 就会触发这个事件
+
+            var x = e.pageX;
+            var y = e.pageY;
+            pic.style.left = x - 25  + 'px';
+            pic.style.top = y - 20 + 'px';
+        })
+    </script>
+</body>
+
+</html>
